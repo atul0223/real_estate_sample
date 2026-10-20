@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Dr. Farah Merhi — Rare Assets, Dubai</title>
+  <meta name="description" content="Dr. Farah Merhi — private access to Dubai's rarest real estate opportunities: pre-launch allocations, joint ventures, profitable flips and purchase groups.">
+  <meta name="theme-color" content="#050807">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500&family=Reem+Kufi:wght@400;500;600&family=Almarai:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body class="is-loading">
+
+  <!-- Loader: a diamond drawn in gold -->
+  <div class="loader" aria-hidden="true">
+    <svg class="loader-gem" viewBox="0 0 120 100" fill="none">
+      <path d="M20 8 H100 L118 34 L60 96 L2 34 Z"/>
+      <path d="M2 34 H118 M38 8 L28 34 L60 96 L92 34 L82 8 M28 34 L60 8 L92 34"/>
+    </svg>
+    <div class="loader-text">
+      <span class="loader-name">Farah Merhi</span>
+      <span class="loader-pct"><b class="loader-count">0</b>%</span>
+    </div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><i></i></div>
+  <canvas id="webgl" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><b data-i18n="menu">Menu</b>
+    </button>
+    <a href="#top" class="brand" data-scroll aria-label="Dr. Farah Merhi — home">
+      <span class="brand-mono">F<i>M</i></span>
+      <span class="brand-word" data-i18n="brandWord">Farah Merhi</span>
+    </a>
+    <div class="nav-right">
+      <button class="lang" id="langToggle" type="button" aria-label="Switch language">
+        <span class="lang-en">EN</span><span class="lang-ar">ع</span>
+      </button>
+      <a href="#contact" class="nav-cta" data-scroll><span data-i18n="navCta">Private enquiry</span></a>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-inner">
+      <nav class="menu-links">
+        <a href="#services" data-scroll><i>I</i><span data-i18n="navServices">Services</span></a>
+        <a href="#numbers" data-scroll><i>II</i><span data-i18n="navNumbers">Why Dubai</span></a>
+        <a href="#collection" data-scroll><i>III</i><span data-i18n="navCollection">Collection</span></a>
+        <a href="#areas" data-scroll><i>IV</i><span data-i18n="navAreas">Areas</span></a>
+        <a href="#circle" data-scroll><i>V</i><span data-i18n="navCircle">Investor Circle</span></a>
+        <a href="#about" data-scroll><i>VI</i><span data-i18n="navAbout">About</span></a>
+      </nav>
+      <div class="menu-side">
+        <p data-i18n="menuSide">Private real estate advisory for discerning investors.</p>
+        <a href="https://www.instagram.com/investindubai33/" target="_blank" rel="noopener">Instagram — @investindubai33</a>
+        <a href="#contact" data-scroll data-i18n="navCta">Private enquiry</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- 3D diamond story -->
+    <section class="story" id="story">
+      <div class="story-sticky">
+
+        <div class="chapter ch-0 is-first" data-step="0">
+          <p class="overline" data-i18n="c0over">Dr. Farah Merhi · Dubai</p>
+          <h1 class="mega"><span data-i18n="c0title">Rare assets.<br><em>Rarer access.</em></span></h1>
+          <p class="chapter-text" data-i18n="c0text">Private real estate investments in Dubai — pre-launch allocations, joint ventures and profitable flips.</p>
+        </div>
+
+        <div class="chapter ch-right" data-step="1">
+          <p class="overline"><span class="num">I</span><span data-i18n="c1over">The advantage</span></p>
+          <h2 class="big"><span data-i18n="c1title">Brilliance,<br><em>tax-free.</em></span></h2>
+          <p class="chapter-text" data-i18n="c1text">0% personal income tax and no capital gains tax on property. In Spain, the top rate reaches 47%.</p>
+        </div>
+
+        <div class="chapter ch-center" data-step="2">
+          <p class="overline"><span class="num">II</span><span data-i18n="c2over">Due diligence</span></p>
+          <h2 class="big"><span data-i18n="c2title">Every facet,<br><em>considered.</em></span></h2>
+          <p class="chapter-text" data-i18n="c2text">Location, developer, payment plan, exit — each examined before you commit a single dirham.</p>
+        </div>
+
+        <div class="chapter" data-step="3">
+          <p class="overline"><span class="num">III</span><span data-i18n="c3over">Structure</span></p>
+          <h2 class="big"><span data-i18n="c3title">Value,<br><em>multiplied.</em></span></h2>
+          <p class="chapter-text" data-i18n="c3text">Purchase groups and joint ventures unlock pricing usually reserved for the few.</p>
+        </div>
+
+        <div class="chapter ch-end" data-step="4">
+          <p class="overline"><span class="num">IV</span><span data-i18n="c4over">Your move</span></p>
+          <h2 class="mega"><span data-i18n="c4title">Your invitation<br>to <em>Dubai.</em></span></h2>
+          <div class="chapter-actions">
+            <a href="#contact" class="btn btn-gold magnetic" data-scroll><span data-i18n="ctaEnquire">Make a private enquiry</span></a>
+            <a href="#services" class="btn btn-line magnetic" data-scroll><span data-i18n="ctaDiscover">Discover services</span></a>
+          </div>
+        </div>
+
+        <div class="story-side story-side-l" aria-hidden="true"><span data-i18n="sideL">Est. Dubai · KASH Real Estate</span></div>
+        <div class="story-side story-side-r" aria-hidden="true"><span class="story-count"><b class="story-current">01</b> — 05</span></div>
+        <div class="story-progress" aria-hidden="true"><span></span></div>
+        <div class="scroll-cue" aria-hidden="true"><span data-i18n="scrollCue">Scroll</span><i></i></div>
+      </div>
+    </section>
+
+    <!-- Manifesto ribbon -->
+    <section class="ribbon" aria-hidden="true">
+      <div class="ribbon-row"><div class="ribbon-track" id="ribbon1"></div></div>
+      <div class="ribbon-row is-reverse"><div class="ribbon-track" id="ribbon2"></div></div>
+    </section>
+
+    <!-- Services: index with hover preview -->
+    <section class="services" id="services">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="overline" data-reveal><span class="num">—</span><span data-i18n="svOver">Services</span></p>
+          <h2 class="h2 mask"><span data-i18n="svTitle">The <em>art</em> of the deal.</span></h2>
+        </header>
+        <ol class="index" id="serviceIndex">
+          <li class="index-row" data-preview="0">
+            <span class="index-num">01</span>
+            <div class="index-main"><h3 data-i18n="sv1t">Pre-launch access</h3><p data-i18n="sv1d">Priority allocation in unique launches before public release — the earliest price tier and the best floors.</p></div>
+            <span class="index-tag" data-i18n="sv1tag">Off-plan</span>
+          </li>
+          <li class="index-row" data-preview="1">
+            <span class="index-num">02</span>
+            <div class="index-main"><h3 data-i18n="sv2t">Joint ventures</h3><p data-i18n="sv2d">Co-invest alongside partners on larger assets with transparent structures, shared upside and defined exits.</p></div>
+            <span class="index-tag" data-i18n="sv2tag">Co-investment</span>
+          </li>
+          <li class="index-row" data-preview="2">
+            <span class="index-num">03</span>
+            <div class="index-main"><h3 data-i18n="sv3t">Profitable flips</h3><p data-i18n="sv3d">Undervalued and early-stage units, held through value growth and resold at precisely the right moment.</p></div>
+            <span class="index-tag" data-i18n="sv3tag">Value-add</span>
+          </li>
+          <li class="index-row" data-preview="3">
+            <span class="index-num">04</span>
+            <div class="index-main"><h3 data-i18n="sv4t">Purchase groups</h3><p data-i18n="sv4d">Pooled buying power for bulk pricing and payment plans no single buyer is offered.</p></div>
+            <span class="index-tag" data-i18n="sv4tag">Collective</span>
+          </li>
+          <li class="index-row" data-preview="4">
+            <span class="index-num">05</span>
+            <div class="index-main"><h3 data-i18n="sv5t">Sales &amp; leasing</h3><p data-i18n="sv5d">Ready-property buying, selling and leasing with KASH Real Estate's boutique team.</p></div>
+            <span class="index-tag" data-i18n="sv5tag">Secondary</span>
+          </li>
+        </ol>
+      </div>
+      <!-- Floating preview that follows the cursor (desktop) -->
+      <div class="preview" id="preview" aria-hidden="true">
+        <div class="preview-inner">
+          <div class="pv pv-0"><i></i><i></i><i></i><i></i></div>
+          <div class="pv pv-1"><i></i><i></i></div>
+          <div class="pv pv-2"><svg viewBox="0 0 200 140" preserveAspectRatio="none"><path d="M0 120 C 60 118, 80 96, 110 70 S 170 18, 200 12"/></svg></div>
+          <div class="pv pv-3"></div>
+          <div class="pv pv-4"><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="numbers" id="numbers">
+      <div class="wrap">
+        <header class="sec-head center">
+          <p class="overline center" data-reveal><span class="num">—</span><span data-i18n="nmOver">Why Dubai</span></p>
+          <h2 class="h2 mask"><span data-i18n="nmTitle">Where capital <em>shines.</em></span></h2>
+        </header>
+
+        <div class="hero-number" data-reveal>
+          <span class="hn-figure"><span data-count="0">0</span><sup>%</sup></span>
+          <span class="hn-label" data-i18n="nm0">Personal income tax</span>
+        </div>
+
+        <div class="ruler" data-reveal>
+          <div class="ruler-row"><span data-i18n="rSpain">Spain</span><span class="ruler-line"><i data-w="47"></i></span><b>47%</b></div>
+          <div class="ruler-row"><span data-i18n="rUk">United Kingdom</span><span class="ruler-line"><i data-w="45"></i></span><b>45%</b></div>
+          <div class="ruler-row is-gold"><span data-i18n="rDubai">Dubai</span><span class="ruler-line"><i data-w="0.6"></i></span><b>0%</b></div>
+          <p class="ruler-note" data-i18n="rNote">Approximate top personal income tax rates.</p>
+        </div>
+
+        <div class="trio">
+          <div class="trio-item" data-reveal>
+            <span class="trio-fig"><span data-count="100">0</span><sup>%</sup></span>
+            <p data-i18n="nm1">Foreign freehold ownership in designated zones</p>
+          </div>
+          <div class="trio-item" data-reveal>
+            <span class="trio-fig"><span data-count="10">0</span><sup data-i18n="nmYrs">yrs</sup></span>
+            <p data-i18n="nm2">Golden Visa with property from AED 2M</p>
+          </div>
+          <div class="trio-item" data-reveal>
+            <span class="trio-fig">6–8<sup>%*</sup></span>
+            <p data-i18n="nm3">Typical gross rental yields</p>
+          </div>
+        </div>
+        <p class="fine" data-i18n="fine">*Indicative ranges only; yields vary by area, unit and market conditions. Not financial advice.</p>
+      </div>
+    </section>
+
+    <!-- Collection: horizontal gallery -->
+    <section class="collection" id="collection">
+      <div class="wrap collection-head">
+        <div>
+          <p class="overline" data-reveal><span class="num">—</span><span data-i18n="clOver">The collection</span></p>
+          <h2 class="h2 mask"><span data-i18n="clTitle">Closings &amp; <em>distinctions.</em></span></h2>
+        </div>
+        <div class="gallery-nav">
+          <button type="button" class="gnav" id="galPrev" aria-label="Previous"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button type="button" class="gnav" id="galNext" aria-label="Next"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="gallery" id="gallery" tabindex="0" aria-label="Closings and distinctions">
+        <article class="lot">
+          <div class="lot-frame lot-a" aria-hidden="true"><i></i><i></i><i></i><span class="lot-seal" data-i18n="sold">Sold</span></div>
+          <p class="lot-no" data-i18n="lot1n">Lot 01 · Just sold</p>
+          <h3 data-i18n="lot1t">Binghatti × Mercedes-Benz Places</h3>
+          <p class="lot-desc" data-i18n="lot1d">Branded residences, Downtown Dubai</p>
+        </article>
+        <article class="lot">
+          <div class="lot-frame lot-b" aria-hidden="true"><svg viewBox="0 0 100 100" fill="none"><path d="M50 8l11 24 26 3-19 18 5 26-23-13-23 13 5-26L13 35l26-3z"/></svg></div>
+          <p class="lot-no" data-i18n="lot2n">Lot 02 · Distinction</p>
+          <h3 data-i18n="lot2t">Rising Star of November</h3>
+          <p class="lot-desc" data-i18n="lot2d">Awarded by KASH Real Estate, 2025</p>
+        </article>
+        <article class="lot">
+          <div class="lot-frame lot-c" aria-hidden="true"><i></i></div>
+          <p class="lot-no" data-i18n="lot3n">Lot 03 · Closings</p>
+          <h3 data-i18n="lot3t">Top agent closing</h3>
+          <p class="lot-desc" data-i18n="lot3d">Downtown Dubai &amp; Jebel Ali</p>
+        </article>
+        <article class="lot">
+          <div class="lot-frame lot-d" aria-hidden="true"><span>19.2k</span></div>
+          <p class="lot-no" data-i18n="lot4n">Lot 04 · Community</p>
+          <h3 data-i18n="lot4t">An investor following</h3>
+          <p class="lot-desc" data-i18n="lot4d">On Instagram, @investindubai33</p>
+        </article>
+      </div>
+      <div class="wrap"><div class="gallery-bar"><span id="galBar"></span></div></div>
+    </section>
+
+    <!-- Areas: pinned scroller -->
+    <section class="areas" id="areas">
+      <div class="areas-pin">
+        <div class="wrap areas-inner">
+          <div class="areas-left">
+            <p class="overline"><span class="num">—</span><span data-i18n="arOver">Addresses</span></p>
+            <div class="areas-window">
+              <ul class="areas-names" id="areaNames"></ul>
+            </div>
+          </div>
+          <div class="areas-card" id="areaCard">
+            <span class="ac-emirate" id="acEmirate"></span>
+            <h3 id="acName"></h3>
+            <p id="acText"></p>
+            <span class="ac-tag" id="acTag"></span>
+            <span class="ac-count"><b id="acIdx">01</b> / 06</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Private Investor Circle -->
+    <section class="circle" id="circle">
+      <div class="wrap circle-inner">
+        <div class="invite" data-tilt data-reveal>
+          <div class="invite-border"></div>
+          <p class="invite-small" data-i18n="ivSmall">By invitation</p>
+          <h3 class="invite-title"><span data-i18n="ivTitle">The Private<br><em>Investor Circle</em></span></h3>
+          <div class="invite-rule"><span>◆</span></div>
+          <p class="invite-text" data-i18n="ivText">Purchase groups &amp; joint ventures · Limited allocations · Launch-day pricing</p>
+          <p class="invite-sign">Farah Merhi</p>
+        </div>
+        <div class="circle-copy">
+          <p class="overline" data-reveal><span class="num">—</span><span data-i18n="ccOver">Membership</span></p>
+          <h2 class="h2 mask"><span data-i18n="ccTitle">Invest as <em>one.</em></span></h2>
+          <p class="lead" data-reveal data-i18n="ccText">A private circle of investors who pool their buying power — for allocations, pricing and payment terms that individual buyers rarely see.</p>
+          <ul class="perks" data-reveal>
+            <li data-i18n="pk1">First look at pre-launch projects</li>
+            <li data-i18n="pk2">Group pricing &amp; negotiated terms</li>
+            <li data-i18n="pk3">Structured JV opportunities</li>
+          </ul>
+          <a href="#contact" class="btn btn-gold magnetic" data-scroll data-reveal><span data-i18n="ccCta">Request an invitation</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="wrap about-inner">
+        <figure class="portrait" data-reveal>
+          <!-- Replace .portrait-art contents with <img src="assets/farah.jpg" alt="Dr. Farah Merhi"> when the headshot arrives -->
+          <div class="portrait-art"><span>F<i>M</i></span></div>
+          <figcaption><span data-i18n="pfCap">Rising Star</span> · KASH Real Estate</figcaption>
+        </figure>
+        <div class="about-copy">
+          <p class="overline" data-reveal><span class="num">—</span><span data-i18n="abOver">The advisor</span></p>
+          <h2 class="h2 mask"><span data-i18n="abTitle">Dr. Farah <em>Merhi</em></span></h2>
+          <p class="lead" data-reveal data-i18n="abLead">Dubai-based, with Lebanese roots — trusted by local and international investors for access, discretion and results.</p>
+          <p class="body" data-reveal data-i18n="abBody">Working with KASH Real Estate's boutique team, Farah curates Dubai's most compelling opportunities — from pre-launch allocations to structured joint ventures — and guides every client personally, in English or Arabic.</p>
+          <p class="signature" data-reveal>Farah Merhi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div class="contact-copy">
+          <p class="overline" data-reveal><span class="num">—</span><span data-i18n="ctOver">Private enquiry</span></p>
+          <h2 class="h2 mask"><span data-i18n="ctTitle">Begin the<br><em>conversation.</em></span></h2>
+          <p class="lead" data-reveal data-i18n="ctText">Share a few details. Farah will continue the conversation personally and privately on WhatsApp.</p>
+          <p class="contact-addr" data-reveal data-i18n="ctAddr">KASH Real Estate · Jumeirah, Al Mina, Dubai</p>
+        </div>
+        <form class="concierge" id="leadForm" data-reveal novalidate>
+          <label class="line-field">
+            <span data-i18n="fName">Your name</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <div class="line-pair">
+            <label class="line-field">
+              <span data-i18n="fInterest">Interest</span>
+              <select name="interest">
+                <option value="Pre-launch" data-i18n="o1">Pre-launch</option>
+                <option value="Joint venture" data-i18n="o2">Joint venture</option>
+                <option value="Flip" data-i18n="o3">Profitable flip</option>
+                <option value="Investor Circle" data-i18n="o4">Investor Circle</option>
+                <option value="Buy / lease" data-i18n="o5">Buy / lease</option>
+              </select>
+            </label>
+            <label class="line-field">
+              <span data-i18n="fBudget">Budget</span>
+              <select name="budget">
+                <option>AED 1–2M</option>
+                <option selected>AED 2–5M</option>
+                <option>AED 5–10M</option>
+                <option>AED 10M+</option>
+              </select>
+            </label>
+          </div>
+          <label class="line-field">
+            <span data-i18n="fMsg">Message (optional)</span>
+            <textarea name="message" rows="2"></textarea>
+          </label>
+          <button class="btn btn-gold btn-wide magnetic" type="submit">
+            <span data-i18n="fSubmit">Continue on WhatsApp</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form-error" id="formError" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-mono" aria-hidden="true">F<i>M</i></div>
+        <p class="footer-tag" data-i18n="footTag">Rare assets. Rarer access.</p>
+        <div class="footer-bar">
+          <span>© <span id="year"></span> Dr. Farah Merhi</span>
+          <a href="https://www.instagram.com/investindubai33/" target="_blank" rel="noopener">@investindubai33</a>
+          <a href="https://softwarethekedar.in" target="_blank" rel="noopener" data-i18n="footCredit">Concept by softwarethekedar.in</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
